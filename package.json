@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel c.js -o index.js",
-    "prebuild": "npm run build"
+    "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js"
   },
   "repository": {
     "type": "git",
