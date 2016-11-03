@@ -1,9 +1,12 @@
-//helloworld.js
+import SimpleButton from 'lib/buttons/simple'
 import React from 'react';
 class ReactHelloWorld extends React.Component {
   render() {
     return (
-      <div> Hello world!! </div>
+      <div>
+        Hello world!!
+        <SimpleButton />
+      </div>
     )
   }
 }
