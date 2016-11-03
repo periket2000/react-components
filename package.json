@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js"
+    "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js && npm run prepublish",
+    "prepublish": "node ./node_modules/babel-cli/bin/babel.js ./src --out-dir ./lib --source-maps --presets es2015,react"
   },
   "repository": {
     "type": "git",
