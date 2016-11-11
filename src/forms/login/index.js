@@ -6,7 +6,7 @@ import { title, html } from './index.md';
 import imageES from './images/Spain.png';
 import imageUK from './images/UK.png';
 
-class LoginPage extends React.Component {
+class LoginForm extends React.Component {
 
   propTypes: {
     'languages': PropTypes.array,
@@ -131,4 +131,4 @@ class LoginPage extends React.Component {
 
 }
 
-export default LoginPage;
+export default LoginForm;
