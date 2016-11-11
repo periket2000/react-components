@@ -14,37 +14,35 @@ class LoginForm extends React.Component {
     'i18n': PropTypes.object.isRequired,
     'switchES': PropTypes.func.isRequired,
     'switchUK': PropTypes.func.isRequired
-  };
-
-  getDefaultProps() {
-    return {
-      'languages': ['es', 'en'],
-      'lang': 'es',
-      'i18n': {
-        'en': {},
-        'es': {}
-      },
-      'switchES': () => {
-        this.props.lang = 'es';
-      },
-      'switchUK': () => {
-        this.props.lang = 'en';
-      }
-    }
   }
 
   constructor(props) {
     super(props);
 
+    props.lang = 'es';
+    props.languages = ['en', 'es'];
+    props.i18n = {
+      'en': {},
+      'es': {}
+    };
+    props.switchUK = function() {
+      this.state.lang = 'en';
+    };
+    props.switchES = function() {
+      this.state.lang = 'es';
+    };
+
     this.state = {
       lang: this.props.lang
     };
-  }
 
+    this.load_t();
+  }
+/*
   componentWillMount() {
     this.load_t();
   }
-
+*/
   componentDidMount() {
     document.title = title;
   }
