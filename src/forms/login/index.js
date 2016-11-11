@@ -19,7 +19,7 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
-    setProps({
+    this.setProps({
       lang: 'es',
       languages: ['en', 'es'],
       i18n: {
