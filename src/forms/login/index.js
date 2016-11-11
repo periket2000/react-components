@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state({
+    this.state = {
       lang: 'es',
       languages: ['en', 'es'],
       i18n: {
@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
       switchES: function () {
         this.state.lang = 'es';
       }
-    });
+    };
 
     this.load_t();
   }
