@@ -19,18 +19,20 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
-    props.lang = 'es';
-    props.languages = ['en', 'es'];
-    props.i18n = {
-      'en': {},
-      'es': {}
-    };
-    props.switchUK = function() {
-      this.state.lang = 'en';
-    };
-    props.switchES = function() {
-      this.state.lang = 'es';
-    };
+    setProps({
+      lang: 'es',
+      languages: ['en', 'es'],
+      i18n: {
+        'en': {},
+        'es': {}
+      },
+      switchUK: function () {
+        this.state.lang = 'en';
+      },
+      switchES: function () {
+        this.state.lang = 'es';
+      }
+    })
 
     this.state = {
       lang: this.props.lang
