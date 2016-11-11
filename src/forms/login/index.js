@@ -8,18 +8,10 @@ import imageUK from './images/UK.png';
 
 class LoginForm extends React.Component {
 
-  propTypes: {
-    'languages': PropTypes.array,
-    'lang': PropTypes.string,
-    'i18n': PropTypes.object.isRequired,
-    'switchES': PropTypes.func.isRequired,
-    'switchUK': PropTypes.func.isRequired
-  }
-
   constructor(props) {
     super(props);
 
-    this.setProps({
+    this.state({
       lang: 'es',
       languages: ['en', 'es'],
       i18n: {
@@ -32,11 +24,7 @@ class LoginForm extends React.Component {
       switchES: function () {
         this.state.lang = 'es';
       }
-    })
-
-    this.state = {
-      lang: this.props.lang
-    };
+    });
 
     this.load_t();
   }
@@ -98,10 +86,10 @@ class LoginForm extends React.Component {
         &copy; 2014. All Rights Reserved.
       </div>
       <div>
-        <a href="#" onClick={this.props.switchES}>
+        <a href="#" onClick={this.state.switchES}>
         <img src={imageES} className={'images-lang'}/>
         </a>
-        <a href="#" onClick={this.props.switchUK}>
+        <a href="#" onClick={this.state.switchUK}>
         <img src={imageUK} className={'images-lang'} />
         </a>
       </div>
@@ -115,18 +103,18 @@ class LoginForm extends React.Component {
   }
 
   load_t() {
-    for( var i in this.props.languages ) {
-      var data = require('./i18n/' + this.props.languages[i] + '.json');
+    for( var i in this.state.languages ) {
+      var data = require('./i18n/' + this.state.languages[i] + '.json');
       if(data) {
         for (var attrname in data) {
-          this.props.i18n[attrname] = data[attrname];
+          this.state.i18n[attrname] = data[attrname];
         }
       }
     }
   }
 
   t(key) {
-    return this.props.i18n[this.state.lang][key];
+    return this.state.i18n[this.state.lang][key];
   }
 
 }
