@@ -45,8 +45,8 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    console.log('Rendering component LoginForm');
     return (
-
         <section id="content-signin">
 
         <div className={'signinpanel'}>
