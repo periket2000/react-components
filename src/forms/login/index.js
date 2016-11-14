@@ -44,6 +44,19 @@ class LoginForm extends React.Component {
     }
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    if(nextProps.lang !== undefined && nextProps.languages.indexOf(nextProps.lang) !== -1) {
+      this.setState({'lang': nextProps.lang})
+    }
+    if(nextProps.switchUK !== undefined ) {
+      this.setState({'switchUK': nextProps.switchUK})
+    }
+
+    if(nextProps.switchES !== undefined ) {
+      this.setState({'switchES': nextProps.switchES})
+    }
+  }
+
   render() {
     return (
 
