@@ -31,15 +31,15 @@ class LoginForm extends React.Component {
 
   componentDidMount() {
     document.title = title;
-    if(this.props.lang !== 'undefined') {
+    if(this.props.lang !== undefined) {
       this.setState({'lang': this.props.lang})
     }
 
-    if(this.props.switchUK !== 'undefined' ) {
+    if(this.props.switchUK !== undefined ) {
       this.setState({'switchUK': this.props.switchUK})
     }
 
-    if(this.props.switchES !== 'undefined' ) {
+    if(this.props.switchES !== undefined ) {
       this.setState({'switchES': this.props.switchES})
     }
   }
