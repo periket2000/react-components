@@ -26,6 +26,11 @@ class LoginForm extends React.Component {
       }
     };
 
+    this.load_t();
+  }
+
+  componentDidMount() {
+    document.title = title;
     if(props.lang !== 'undefined') {
       this.setState({'lang': props.lang})
     }
@@ -37,12 +42,6 @@ class LoginForm extends React.Component {
     if(props.switchES !== 'undefined' ) {
       this.setState({'switchES': props.switchES})
     }
-
-    this.load_t();
-  }
-
-  componentDidMount() {
-    document.title = title;
   }
 
   render() {
