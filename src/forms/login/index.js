@@ -31,17 +31,6 @@ class LoginForm extends React.Component {
 
   componentDidMount() {
     document.title = title;
-    if(this.props.lang !== undefined && this.state.languages.indexOf(this.props.lang) !== -1) {
-      this.setState({'lang': this.props.lang})
-    }
-
-    if(this.props.switchUK !== undefined ) {
-      this.setState({'switchUK': this.props.switchUK})
-    }
-
-    if(this.props.switchES !== undefined ) {
-      this.setState({'switchES': this.props.switchES})
-    }
   }
 
   render() {
@@ -93,10 +82,10 @@ class LoginForm extends React.Component {
         &copy; 2014. All Rights Reserved.
       </div>
       <div>
-        <a href="#" onClick={this.state.switchES}>
+        <a href="#" onClick={this.props.switchES !== undefined ? this.props.switchES : this.state.switchES}>
         <img src={imageES} className={'images-lang'}/>
         </a>
-        <a href="#" onClick={this.state.switchUK}>
+        <a href="#" onClick={this.props.switchUK !== undefined ? this.props.switchUK : this.state.switchUK}>
         <img src={imageUK} className={'images-lang'} />
         </a>
       </div>
@@ -121,7 +110,7 @@ class LoginForm extends React.Component {
   }
 
   t(key) {
-    return this.state.i18n[this.state.lang][key];
+    return this.state.i18n[this.props.lang !== undefined ? this.props.lang : this.state.lang][key];
   }
 
 }
