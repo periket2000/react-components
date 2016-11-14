@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
 
   componentDidMount() {
     document.title = title;
-    if(this.props.lang !== undefined) {
+    if(this.props.lang !== undefined && this.state.languages.indexOf(this.props.lang) !== -1) {
       this.setState({'lang': this.props.lang})
     }
 
