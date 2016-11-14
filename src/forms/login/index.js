@@ -20,21 +20,15 @@ class LoginForm extends React.Component {
       },
       switchUK: () => {
         this.setState({'lang': 'en'});
-        console.log(this.state.lang);
       },
       switchES: () => {
         this.setState({'lang': 'es'});
-        console.log(this.state.lang);
       }
     };
 
     this.load_t();
   }
-/*
-  componentWillMount() {
-    this.load_t();
-  }
-*/
+
   componentDidMount() {
     document.title = title;
   }
