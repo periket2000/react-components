@@ -19,12 +19,12 @@ class LoginForm extends React.Component {
         'es': {}
       },
       switchUK: () => {
-        this.state.lang = 'en';
-        this.render();
+        this.setState({'lang': 'en'});
+        console.log(this.state.lang);
       },
       switchES: () => {
-        this.state.lang = 'es';
-        this.render();
+        this.setState({'lang': 'es'});
+        console.log(this.state.lang);
       }
     };
 
