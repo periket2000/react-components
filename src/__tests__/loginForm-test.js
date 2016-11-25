@@ -10,8 +10,14 @@ describe("LoginForm component - test", () => {
         this.renderedDOM = () => ReactDOM.findDOMNode(this.component);
     });
 
-    it("basic render", function() {
+    it("Testing structure", function() {
         let inputs = this.renderedDOM().querySelectorAll("input");
-        expect(inputs).toExist();
+        expect(inputs.length).toEqual(2);
+        expect(inputs[0].id).toEqual("login_username");
+        expect(inputs[1].id).toEqual("login_password");
+
+        let buttons = this.renderedDOM().querySelectorAll("button");
+        expect(buttons.length).toEqual(1);
+        expect(buttons[0].id).toEqual("signin_btn");
     });
 });
