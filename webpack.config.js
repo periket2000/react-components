@@ -5,13 +5,12 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: "/static/"
     },
-    /*
     devServer: {
         port: 8989,
         historyApiFallback: {
             index: 'index.html'
         }
-    },*/
+    },
     module: {
         loaders: [
             {
