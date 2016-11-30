@@ -4,6 +4,7 @@
   "description": "Mybi react components",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "karma start",
     "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js && npm run prepublish",
     "prepublish": "node ./node_modules/babel-cli/bin/babel.js ./src --out-dir ./lib --source-maps --copy-files --presets es2015,react"
@@ -26,10 +27,12 @@
     "babel-preset-stage-0": "^6.16.0",
     "browserify": "^13.1.1",
     "browserify-shim": "^3.8.12",
+    "connect": "^3.5.0",
     "d3": "^4.3.0",
     "eslint": "^3.10.1",
     "eslint-plugin-react": "^6.7.1",
     "expect": "^1.20.2",
+    "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "front-matter": "^2.1.0",
     "highlight.js": "^9.8.0",
@@ -43,13 +46,17 @@
     "karma-webpack": "^1.8.0",
     "markdown-it": "^8.1.0",
     "mocha": "^3.1.2",
+    "path": "^0.12.7",
     "path-to-regexp": "^1.7.0",
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
     "requirejs": "^2.3.2",
+    "serve-static": "^1.11.1",
     "url-loader": "^0.5.7",
     "watchify": "^3.7.0",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4"
   }
 }
