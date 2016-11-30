@@ -1,0 +1,30 @@
+body {
+  /*background: #e4e7ea;*/
+  font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
+  line-height: 21px;
+  /*color: #636e7b;*/
+}
+
+.images-lang {
+  width: 25px; float: right;
+}
+
+ul.letter-list li.active a {
+  color: #ffffff;
+  background: #428BCA;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.badge {
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+
+.signup-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 12px;
+}

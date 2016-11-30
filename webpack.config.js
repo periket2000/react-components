@@ -1,5 +1,15 @@
 module.exports = {
-    entry: './displayer.js',
+    entry: [
+        './extra/css/bootstrap.min.css',
+        './extra/css/jquery-ui-1.10.3.css',
+        './extra/css/jquery.datatables.css',
+        './extra/css/jquery.gritter.css',
+        './extra/css/style.bluenav.css',
+        './extra/css/my_custom.css',
+        './extra/css/lato.css',
+        /* The main entry point of your JavaScript application */
+        './displayer.js',
+    ],
     output: {
         path: __dirname,
         filename: 'bundle.js',
@@ -31,6 +41,21 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
                 loader: 'url-loader?limit=10000',
+            },
+            {
+                test: /\.css/,
+                exclude: [
+                    __dirname + '/node_modules',
+                ],
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                ],
+            },
+            {
+                test: /\.(eot|ttf|wav|mp3)$/,
+                loader: 'file-loader',
             },
         ]
     }
