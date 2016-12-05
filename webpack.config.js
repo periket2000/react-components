@@ -4,9 +4,10 @@ module.exports = {
         './extra/css/jquery-ui-1.10.3.css',
         './extra/css/jquery.datatables.css',
         './extra/css/jquery.gritter.css',
-        './extra/css/style.bluenav.css',
-        './extra/css/my_custom.css',
+        /*'./extra/css/style.bluenav.css',*/
+        './extra/css/style.default.css',
         './extra/css/lato.css',
+        './extra/css/my_custom.css',
         /* The main entry point of your JavaScript application */
         './displayer.js',
     ],

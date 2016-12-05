@@ -1,8 +1,8 @@
 body {
-  /*background: #e4e7ea;*/
+  background: #e4e7ea;
   font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
   line-height: 21px;
-  /*color: #636e7b;*/
+  color: #636e7b;
 }
 
 .images-lang {
@@ -20,6 +20,8 @@ ul.letter-list li.active a {
 .badge {
   margin-bottom: 2px;
   vertical-align: middle;
+  background-color: #1CAF9A;
+  color: #1CAF9A;
 }
 
 .signup-footer {
