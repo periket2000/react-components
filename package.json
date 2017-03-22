@@ -7,7 +7,10 @@
     "start": "webpack-dev-server",
     "test": "karma start",
     "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js && npm run prepublish",
-    "prepublish": "node ./node_modules/babel-cli/bin/babel.js ./src --out-dir ./lib --source-maps --copy-files --ignore __tests__ --presets es2015,react"
+    "prepublish": "npm run prepublish1 && npm run prepublish2",
+    "prepublish1": "node ./node_modules/babel-cli/bin/babel.js ./src --out-dir ./lib --source-maps --copy-files --ignore __tests__ --presets es2015,react",
+    "prepublish2": "mkdir -p ./lib/styles && cp -R ./extra/* ./lib/styles",
+    "clean": "rm -fr ./lib/*"
   },
   "repository": {
     "type": "git",
