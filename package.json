@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Mybi react components",
   "main": "lib/index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "lib/"
+  ],
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start",
