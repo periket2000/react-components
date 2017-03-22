@@ -2,11 +2,11 @@
   "name": "mybi-react-components",
   "version": "1.0.0",
   "description": "Mybi react components",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start",
-    "build": "node ./node_modules/babel-cli/bin/babel.js c.js -o index.js && npm run prepublish",
+    "build": "npm run prepublish",
     "prepublish": "npm run prepublish1 && npm run prepublish2",
     "prepublish1": "node ./node_modules/babel-cli/bin/babel.js ./src --out-dir ./lib --source-maps --copy-files --ignore __tests__ --presets es2015,react",
     "prepublish2": "mkdir -p ./lib/styles && cp -R ./extra/* ./lib/styles",

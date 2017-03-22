@@ -1,5 +1,5 @@
-import SimpleButton from './lib/buttons/simple'
-import LoginForm from './lib/forms/login'
+import SimpleButton from './buttons/simple'
+import LoginForm from './forms/login'
 
 var mybi = {
     SimpleButton: SimpleButton,
