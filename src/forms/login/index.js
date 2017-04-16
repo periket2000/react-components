@@ -102,7 +102,7 @@ class LoginForm extends React.Component {
       <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>and much more...</label></li>
       </ul>
       <div className={'mb20'}></div>
-        <strong data-bind="text: getNotMember()"></strong> <strong><a href="signup.html" data-bind="text: getSignUp()"></a></strong>
+        <strong>Not a member</strong> <strong><a href="signup.html">Sign up</a></strong>
       </div>
 
       </div>
@@ -125,7 +125,7 @@ class LoginForm extends React.Component {
       </div>
 
       <div className={'signup-footer'}>
-        <div className={'pull-left'} data-bind="text: getCopyright()">
+        <div className={'pull-left'}>
         &copy; 2014. All Rights Reserved.
       </div>
       <div>
