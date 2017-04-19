@@ -1,10 +1,8 @@
 import React, { PropTypes } from 'react';
-import s from './styles.css';
-
 import { title, html } from './index.md';
-
 import imageES from './images/Spain.png';
 import imageUK from './images/UK.png';
+import I18n from '../../common/component_utils';
 
 class LoginForm extends React.Component {
 
@@ -18,6 +16,7 @@ class LoginForm extends React.Component {
     this.state = {
       lang: 'es',
       languages: ['en', 'es'],
+      i18n_dir: 'forms/login/i18n',
       i18n: {
         'en': {},
         'es': {}
@@ -32,8 +31,11 @@ class LoginForm extends React.Component {
       }
     };
 
-    this.load_t();
     this.overwrite(props);
+
+    /* call load_t function setting this as "this" */
+    I18n.load_t.apply(this);
+    this.t = I18n.t;
   }
 
   /**
@@ -89,12 +91,12 @@ class LoginForm extends React.Component {
 
         <div className={'signin-info'}>
         <div className={'logopanel'}>
-        <h1><span>[</span><label>{this.t('title')}</label><span>]</span></h1>
+        <h1><span>[</span><label>{this.t.call(this, 'title')}</label><span>]</span></h1>
       </div>
 
       <div className={'mb20'}></div>
 
-      <h5><strong>{this.t('welcome')}</strong></h5>
+      <h5><strong>{this.t.call(this, 'welcome')}</strong></h5>
       <ul>
       <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>Fully Responsive Layout</label></li>
       <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>HTML5/CSS3 Valid</label></li>
@@ -144,22 +146,6 @@ class LoginForm extends React.Component {
 
     );
   }
-
-  load_t() {
-    for( var i in this.state.languages ) {
-      var data = require('./i18n/' + this.state.languages[i] + '.json');
-      if(data) {
-        for (var attrname in data) {
-          this.state.i18n[attrname] = data[attrname];
-        }
-      }
-    }
-  }
-
-  t(key) {
-    return this.state.i18n[this.props.lang !== undefined ? this.props.lang : this.state.lang][key];
-  }
-
 }
 
 export default LoginForm;
