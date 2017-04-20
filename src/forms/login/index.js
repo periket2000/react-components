@@ -9,6 +9,8 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.styles = props.styles || {};
+
     this.handleLoginChange = this.handleLoginChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -132,10 +134,10 @@ class LoginForm extends React.Component {
       </div>
       <div>
         <a href="#" onClick={this.props.switchES !== undefined ? this.props.switchES : this.state.switchES}>
-        <img src={imageES} className={'images-lang'}/>
+        <img src={imageES} style={this.styles.image_es} className={'images-lang'}/>
         </a>
         <a href="#" onClick={this.props.switchUK !== undefined ? this.props.switchUK : this.state.switchUK}>
-        <img src={imageUK} className={'images-lang'} />
+        <img src={imageUK} style={this.styles.image_uk} className={'images-lang'} />
         </a>
       </div>
       </div>
