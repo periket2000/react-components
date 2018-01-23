@@ -24,6 +24,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "material-components-web": "^0.28.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
@@ -36,7 +37,7 @@
     "browserify": "^13.1.1",
     "browserify-shim": "^3.8.12",
     "connect": "^3.5.0",
-    "css-loader": "^0.26.0",
+    "css-loader": "^0.28.9",
     "d3": "^4.3.0",
     "eslint": "^3.10.1",
     "eslint-plugin-react": "^6.7.1",
@@ -64,7 +65,7 @@
     "react-router": "^3.0.0",
     "requirejs": "^2.3.2",
     "serve-static": "^1.11.1",
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.19.1",
     "url-loader": "^0.5.7",
     "watchify": "^3.7.0",
     "webpack": "^1.13.3",

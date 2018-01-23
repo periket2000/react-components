@@ -1,5 +1,9 @@
 module.exports = {
     entry: [
+        /* material design */
+        'material-components-web/dist/material-components-web.css',
+        'material-components-web/dist/material-components-web.js',
+        /* extra css */
         './extra/css/bootstrap.min.css',
         './extra/css/jquery-ui-1.10.3.css',
         './extra/css/jquery.datatables.css',
@@ -45,14 +49,15 @@ module.exports = {
             },
             {
                 test: /\.css/,
-                exclude: [
+                /*exclude: [
                     __dirname + '/node_modules',
-                ],
-                loaders: [
+                ],*/
+                loaders: ['style-loader', 'css-loader'],
+                /*loaders: [
                     'style-loader',
                     'css-loader',
                     //'postcss-loader',
-                ],
+                ],*/
             },
             {
                 test: /\.(eot|ttf|wav|mp3)$/,

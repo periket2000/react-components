@@ -4,6 +4,7 @@ import imageES from './images/Spain.png';
 import imageUK from './images/UK.png';
 import I18n from '../../common/component_utils';
 
+
 class LoginForm extends React.Component {
 
   constructor(props) {
@@ -100,10 +101,10 @@ class LoginForm extends React.Component {
 
       <h5><strong>{this.t.call(this, 'welcome')}</strong></h5>
       <ul>
-      <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>Fully Responsive Layout</label></li>
-      <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>HTML5/CSS3 Valid</label></li>
-      <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>Retina Ready</label></li>
-      <li><i className={'fa badge mdl-badge material-icons mr5'}>*</i> <label>and much more...</label></li>
+        <li><i className={'glyphicon glyphicon-ok'}></i> <label>Fully Responsive Layout</label></li>
+        <li><i className={'glyphicon glyphicon-ok'}></i> <label> HTML5/CSS3 Valid</label></li>
+        <li><i className={'glyphicon glyphicon-ok'}></i> <label> Retina Ready</label></li>
+        <li><i className={'glyphicon glyphicon-ok'}></i> <label> and much more...</label></li>
       </ul>
       <div className={'mb20'}></div>
         <strong>Not a member</strong> <strong><a href="signup.html">Sign up</a></strong>
